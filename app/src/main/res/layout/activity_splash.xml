@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".home.view.HomeActivity">
+    android:orientation="vertical"
+    tools:context="br.org.fundatec.heroes_app.home.view.SplashActivity">
 
     <ImageView
         android:id="@+id/splash"
         android:layout_width="200dp"
         android:layout_height="90dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/logo_fundatec"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/logo_fundatec" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
