@@ -13,21 +13,24 @@
         android:theme="@style/Theme.Heroesapp"
         tools:targetApi="31">
 
-        <activity android:name=".home.view.HomeActivity">
-        </activity>
+        <activity
+            android:name=".home.view.LoginActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".home.view.SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
     </application>
