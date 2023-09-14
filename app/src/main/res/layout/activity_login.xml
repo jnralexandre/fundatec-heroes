@@ -15,37 +15,46 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo_fundatec"></ImageView>
+            android:src="@drawable/logo_fundatec" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.7"
-            android:text="Email:" />
+            android:text="Email:"
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"></EditText>
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.7"
-            android:text="Senha:" />
+            android:text="Senha:"
+            android:textColor="@color/black" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"></EditText>
+            android:inputType="textPassword" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Entrar"
-            app:cornerRadius="32dp"></com.google.android.material.button.MaterialButton>
+            android:text="Login"
+            app:cornerRadius="32dp" />
 
+        <TextView
+            android:id="@+id/btn_novo_por_aqui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:text="Novo por aqui?"
+            android:textColor="@color/black" />
     </LinearLayout>
-
 
 </RelativeLayout>

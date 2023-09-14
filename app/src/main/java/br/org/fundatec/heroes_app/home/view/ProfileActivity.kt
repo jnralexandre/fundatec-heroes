@@ -4,12 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.org.fundatec.heroes_app.R
 
-class HomeActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_profile)
     }
 
 }
