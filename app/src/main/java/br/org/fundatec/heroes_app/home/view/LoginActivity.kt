@@ -24,13 +24,13 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun chamarProfileActivity() {
-        val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
+    private fun chamarHomeActivity() {
+        val intent = Intent(this@LoginActivity, HomeActivity::class.java)
         startActivity(intent)
     }
 
-    private fun chamarHomeActivity() {
-        val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+    private fun chamarProfileActivity() {
+        val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
         startActivity(intent)
     }
 
