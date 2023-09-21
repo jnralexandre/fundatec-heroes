@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">heroes-app</string>
+    <string name="usuario_criado">Usuário Criado!</string>
 </resources>
