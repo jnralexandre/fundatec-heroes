@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="laranja_fundatec">#ffae00</color>
     <color name="azul_fundatec">#0070a8</color>
+    <color name="laranja_fundatec_fraco">#eead2d</color>
 </resources>
