@@ -16,7 +16,7 @@
 
     <View
         android:id="@+id/view_criar_usuario"
-        style="@style/ContainerComponents"
+        style="@style/container_components_activity_profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"></View>
