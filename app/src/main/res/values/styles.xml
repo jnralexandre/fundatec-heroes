@@ -2,7 +2,7 @@
 <resources>
     <style name="container_components_activity_profile">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">320dp</item>
+        <item name="android:layout_height">300dp</item>
         <item name="android:background">@drawable/container_components</item>
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginRight">20dp</item>
@@ -10,7 +10,7 @@
 
     <style name="container_components_activity_login">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">350dp</item>
+        <item name="android:layout_height">300dp</item>
         <item name="android:background">@drawable/container_components</item>
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginRight">20dp</item>
