@@ -41,7 +41,7 @@ class ProfileActivity : AppCompatActivity() {
             Snackbar.make(
                 findViewById(android.R.id.content), R.string.informe_e_mail, Snackbar.LENGTH_LONG
             ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
-            findViewById<EditText>(R.id.edit_text_email).setError("Informe um e-mail");
+            findViewById<EditText>(R.id.edit_text_email).setError("Informe um e-mail válido");
         } else if (name.equals("edit_text_senha")) {
             Snackbar.make(
                 findViewById(android.R.id.content), R.string.informe_senha, Snackbar.LENGTH_LONG

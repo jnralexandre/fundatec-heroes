@@ -46,11 +46,11 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_text_email" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_entrar"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/laranja_fundatec"
-        android:text="Login"
+        android:text="Entrar"
         app:cornerRadius="32dp"
         app:layout_constraintEnd_toEndOf="@+id/view_login"
         app:layout_constraintStart_toStartOf="@+id/view_login"
@@ -64,8 +64,8 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/view_login"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
-        app:layout_constraintStart_toStartOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_entrar"
+        app:layout_constraintStart_toStartOf="@+id/btn_entrar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_entrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
