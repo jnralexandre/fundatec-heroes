@@ -1,8 +1,8 @@
-package br.org.fundatec.heroes_app.home.view
+package br.org.fundatec.heroesapp.home.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import br.org.fundatec.heroes_app.R
+import br.org.fundatec.heroesapp.R
 
 class HomeActivity : AppCompatActivity() {
 

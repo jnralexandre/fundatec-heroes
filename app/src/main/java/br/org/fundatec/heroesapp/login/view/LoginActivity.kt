@@ -1,14 +1,15 @@
-package br.org.fundatec.heroes_app.home.view
+package br.org.fundatec.heroesapp.login.view
 
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import br.org.fundatec.heroes_app.R
+import br.org.fundatec.heroesapp.R
+import br.org.fundatec.heroesapp.home.view.HomeActivity
+import br.org.fundatec.heroesapp.profile.view.ProfileActivity
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {

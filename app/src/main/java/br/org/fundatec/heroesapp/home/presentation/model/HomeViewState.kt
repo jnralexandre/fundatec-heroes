@@ -1,4 +1,4 @@
-package br.org.fundatec.heroes_app.home.presentation.model
+package br.org.fundatec.heroesapp.home.presentation.model
 
 sealed class HomeViewState {
     data class Sucess(val sucessMessage: String) : HomeViewState()

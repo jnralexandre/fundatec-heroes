@@ -1,4 +1,4 @@
-package br.org.fundatec.heroes_app.home.view
+package br.org.fundatec.heroesapp.profile.view
 
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -7,7 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import br.org.fundatec.heroes_app.R
+import br.org.fundatec.heroesapp.R
+import br.org.fundatec.heroesapp.home.view.HomeActivity
 import com.google.android.material.snackbar.Snackbar
 
 class ProfileActivity : AppCompatActivity() {

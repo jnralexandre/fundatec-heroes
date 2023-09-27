@@ -32,7 +32,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".home.view.SplashActivity"
+            android:name=".splash.SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait">

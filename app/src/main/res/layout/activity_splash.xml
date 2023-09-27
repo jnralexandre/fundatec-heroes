@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_profile_activity"
     android:orientation="vertical"
-    tools:context="br.org.fundatec.heroes_app.home.view.SplashActivity">
+    tools:context="br.org.fundatec.heroesapp.splash.view.SplashActivity">
 
     <ImageView
         android:id="@+id/splash"

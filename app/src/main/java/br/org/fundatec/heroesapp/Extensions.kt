@@ -1,4 +1,4 @@
-package br.org.fundatec.heroes_app
+package br.org.fundatec.heroesapp
 
 import android.view.View
 

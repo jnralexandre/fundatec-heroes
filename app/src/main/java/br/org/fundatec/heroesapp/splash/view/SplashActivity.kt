@@ -1,10 +1,11 @@
-package br.org.fundatec.heroes_app.home.view
+package br.org.fundatec.heroesapp.splash.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import br.org.fundatec.heroes_app.R
+import br.org.fundatec.heroesapp.R
+import br.org.fundatec.heroesapp.login.view.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
