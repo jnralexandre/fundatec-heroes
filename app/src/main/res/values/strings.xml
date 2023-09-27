@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">heroes-app</string>
     <string name="usuario_criado">Usuário Criado!</string>
+    <string name="informe_nome_de_usuario">Informe um nome de usuário válido</string>
+    <string name="informe_e_mail">Informe um e-mail válido</string>
+    <string name="informe_senha">A senha precisa conter no mínimo 8 caracteres</string>
 </resources>

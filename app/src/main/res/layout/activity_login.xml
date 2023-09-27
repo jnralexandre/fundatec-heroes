@@ -49,12 +49,11 @@
         android:id="@+id/btn_login"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginTop="10dp"
         android:backgroundTint="@color/laranja_fundatec"
         android:text="Login"
         app:cornerRadius="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view_login"
+        app:layout_constraintStart_toStartOf="@+id/view_login"
         app:layout_constraintTop_toBottomOf="@+id/edit_text_senha" />
 
     <TextView
