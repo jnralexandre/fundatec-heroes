@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import br.org.fundatec.heroesapp.R
-import br.org.fundatec.heroesapp.login.view.LoginActivity
+import br.org.fundatec.heroesapp.login.presentation.te.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 

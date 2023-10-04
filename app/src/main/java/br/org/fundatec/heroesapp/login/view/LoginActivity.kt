@@ -8,15 +8,19 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import br.org.fundatec.heroesapp.R
+import br.org.fundatec.heroesapp.databinding.ActivityLoginBinding
 import br.org.fundatec.heroesapp.home.view.HomeActivity
 import br.org.fundatec.heroesapp.profile.view.ProfileActivity
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_login)
 
         findViewById<Button>(R.id.btn_entrar).setOnClickListener() {
@@ -46,6 +50,16 @@ class LoginActivity : AppCompatActivity() {
             ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
             findViewById<EditText>(R.id.edit_text_senha).setError("A senha precisa conter no mínimo 8 caracteres");
         }
+    }
+
+
+
+    private fun showEmailError() {
+        binding.editTextEmail.error = "Digite um e-mail válido."
+    }
+
+    private fun showSenhaError() {
+        binding.editTextEmail.error = "Digite uma senha válida."
     }
 
     private fun chamarHomeActivity() {
