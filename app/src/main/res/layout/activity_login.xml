@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_profile_activity">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/splash_screen"
@@ -23,45 +22,64 @@
         app:layout_constraintStart_toStartOf="@+id/splash_screen"
         app:layout_constraintTop_toBottomOf="@+id/splash_screen"></View>
 
-    <EditText
-        android:id="@+id/edit_text_email"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email_activity_login"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_email"
-        android:hint="Digite seu e-mail:"
-        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/splash_screen" />
+        app:layout_constraintTop_toTopOf="@+id/view_login">
 
-    <EditText
-        android:id="@+id/edit_text_senha"
+        <EditText
+            android:id="@+id/edit_text_email_activity_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/e_mail"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_text_password_activity_profile"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_eye"
-        android:hint="Digite sua senha:"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_email" />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/til_email_activity_login"
+        app:layout_constraintStart_toStartOf="@+id/til_email_activity_login"
+        app:layout_constraintTop_toBottomOf="@+id/til_email_activity_login"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/edit_text_password_activity_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_entrar"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:backgroundTint="@color/laranja_fundatec"
+        android:backgroundTint="@color/background_button"
         android:text="Entrar"
         app:cornerRadius="32dp"
         app:layout_constraintEnd_toEndOf="@+id/view_login"
         app:layout_constraintStart_toStartOf="@+id/view_login"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_senha" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_password_activity_profile" />
 
     <TextView
         android:id="@+id/btn_novo_por_aqui"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:text="Novo por aqui?"
-        android:textColor="@color/black"
+        android:textColor="@color/special_text"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/view_login"
         app:layout_constraintEnd_toEndOf="@+id/btn_entrar"

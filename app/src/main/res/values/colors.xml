@@ -7,8 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="laranja_fundatec">#ffae00</color>
-    <color name="azul_fundatec">#0070a8</color>
-    <color name="laranja_fundatec_fraco">#eead2d</color>
     <color name="vermelho">#FF0000</color>
+    <color name="background_card">#fff</color>
+    <color name="background_button">#0071e3</color>
+    <color name="default_text">#1d1d1f</color>
+    <color name="special_text">#06c</color>
 </resources>

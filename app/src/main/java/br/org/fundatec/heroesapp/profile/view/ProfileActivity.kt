@@ -13,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
@@ -25,11 +26,11 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun validarProfile() {
-        if (binding.editTextNome.text.toString().isEmpty()) {
+        if (binding.editTextNameActivityProfile.text.toString().isEmpty()) {
             mostrarSnackbarErroNome()
-        } else if (binding.editTextEmail.text.toString().isEmpty() && binding.editTextEmail.text.toString().contains("@") && binding.editTextEmail.text.toString().contains(".com")) {
+        } else if (binding.editTextEmailActivityLogin.text.toString().isEmpty() && binding.editTextEmailActivityLogin.text.toString().contains("@") && binding.editTextEmailActivityLogin.text.toString().contains(".com")) {
             mostrarSnackbarErroEmail()
-        } else if (binding.editTextSenha.text.toString().isEmpty() && binding.editTextSenha.text.toString().length < 8) {
+        } else if (binding.editTextPasswordActivityProfile.toString().isEmpty() && binding.editTextPasswordActivityProfile.text.toString().length < 8) {
             mostrarSnackbarErroSenha()
         } else {
             mostrarSnackbarSucesso()
@@ -43,7 +44,7 @@ class ProfileActivity : AppCompatActivity() {
             R.string.informe_nome_de_usuario,
             Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
-        findViewById<EditText>(R.id.edit_text_nome).setError("Informe um nome de usuário");
+        findViewById<EditText>(R.id.edit_text_name_activity_profile).setError("Informe um nome de usuário");
     }
 
     private fun mostrarSnackbarErroEmail() {
@@ -51,7 +52,7 @@ class ProfileActivity : AppCompatActivity() {
             binding.root, R.string.informe_e_mail,
             Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
-        findViewById<EditText>(R.id.edit_text_email).setError("Informe um e-mail válido");
+        findViewById<EditText>(R.id.edit_text_email_activity_login).setError("Informe um e-mail válido");
     }
 
     private fun mostrarSnackbarErroSenha() {
@@ -59,7 +60,7 @@ class ProfileActivity : AppCompatActivity() {
             binding.root, R.string.informe_senha,
             Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
-        findViewById<EditText>(R.id.edit_text_senha).setError("A senha precisa conter no mínimo 8 caracteres");
+        findViewById<EditText>(R.id.edit_text_password_activity_profile).setError("A senha precisa conter no mínimo 8 caracteres");
     }
 
     private fun mostrarSnackbarSucesso() {
@@ -74,7 +75,7 @@ class ProfileActivity : AppCompatActivity() {
                     this, R.color.white
                 )
             )
-        ).setBackgroundTint(ContextCompat.getColor(this, R.color.laranja_fundatec)).show()
+        ).setBackgroundTint(ContextCompat.getColor(this, R.color.special_text)).show()
     }
 
 }
