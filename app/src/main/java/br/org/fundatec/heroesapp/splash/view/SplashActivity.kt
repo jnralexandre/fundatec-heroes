@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import br.org.fundatec.heroesapp.R
-import br.org.fundatec.heroesapp.login.presentation.te.LoginActivity
+import br.org.fundatec.heroesapp.login.view.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -13,6 +13,7 @@ class SplashActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
         val handle = Handler()
         handle.postDelayed({ chamarLoginActivity() }, 3000)
 

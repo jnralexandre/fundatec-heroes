@@ -17,45 +17,29 @@ class ProfileActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_profile)
-
-        val edit_text_binding_nome = binding.editTextNome
-        val edit_text_binding_email = binding.editTextEmail
-        val edit_text_binding_senha = binding.editTextSenha
+        setContentView(binding.root)
 
         binding.btnCriarUsuario.setOnClickListener {
-            validacaoPreenchimento(
-                edit_text_binding_nome,
-                edit_text_binding_email,
-                edit_text_binding_senha
-            )
+            validarProfile()
         }
     }
 
-    private fun validacaoPreenchimento(
-        edit_text_binding_nome: EditText,
-        edit_text_binding_email: EditText,
-        edit_text_binding_senha: EditText
-    ) {
-
-        if (edit_text_binding_nome.text.toString().isEmpty()) {
+    private fun validarProfile() {
+        if (binding.editTextNome.text.toString().isEmpty()) {
             mostrarSnackbarErroNome()
-        } else if (edit_text_binding_email.text.toString()
-                .isEmpty() && edit_text_binding_email.text.toString()
-                .contains("@") && edit_text_binding_email.text.toString().contains(".com")
-        ) {
+        } else if (binding.editTextEmail.text.toString().isEmpty() && binding.editTextEmail.text.toString().contains("@") && binding.editTextEmail.text.toString().contains(".com")) {
             mostrarSnackbarErroEmail()
-        } else if (edit_text_binding_senha.text.toString()
-                .isEmpty() && edit_text_binding_senha.text.length < 8
-        ) {
+        } else if (binding.editTextSenha.text.toString().isEmpty() && binding.editTextSenha.text.toString().length < 8) {
             mostrarSnackbarErroSenha()
+        } else {
+            mostrarSnackbarSucesso()
         }
 
     }
 
     private fun mostrarSnackbarErroNome() {
         Snackbar.make(
-            findViewById(android.R.id.content),
+            binding.root,
             R.string.informe_nome_de_usuario,
             Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
@@ -64,23 +48,23 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun mostrarSnackbarErroEmail() {
         Snackbar.make(
-            findViewById(android.R.id.content), R.string.informe_e_mail, Snackbar.LENGTH_LONG
+            binding.root, R.string.informe_e_mail,
+            Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
         findViewById<EditText>(R.id.edit_text_email).setError("Informe um e-mail válido");
     }
 
     private fun mostrarSnackbarErroSenha() {
         Snackbar.make(
-            findViewById(android.R.id.content), R.string.informe_senha, Snackbar.LENGTH_LONG
+            binding.root, R.string.informe_senha,
+            Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
         findViewById<EditText>(R.id.edit_text_senha).setError("A senha precisa conter no mínimo 8 caracteres");
     }
 
     private fun mostrarSnackbarSucesso() {
         Snackbar.make(
-            findViewById(android.R.id.content),
-            R.string.usuario_criado,
-            Snackbar.LENGTH_INDEFINITE
+            binding.root, R.string.usuario_criado, Snackbar.LENGTH_INDEFINITE
         ).setAction(android.R.string.ok) {
             val intent = Intent(this@ProfileActivity, HomeActivity::class.java)
             startActivity(intent)

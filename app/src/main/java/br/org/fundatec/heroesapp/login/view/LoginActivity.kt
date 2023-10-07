@@ -52,8 +52,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-
-
     private fun showEmailError() {
         binding.editTextEmail.error = "Digite um e-mail válido."
     }
