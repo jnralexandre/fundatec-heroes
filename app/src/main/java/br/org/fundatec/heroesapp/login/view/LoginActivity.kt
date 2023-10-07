@@ -24,17 +24,21 @@ class LoginActivity : AppCompatActivity() {
         binding.btnEntrar.setOnClickListener {
             validarUsuario()
         }
+
+        binding.btnNovoPorAqui.setOnClickListener {
+            chamarProfileActivity()
+        }
     }
 
     private fun validarUsuario() {
-        if (binding.editTextEmailActivityLogin.text.toString()
-                .isEmpty() && binding.editTextEmailActivityLogin.text.toString()
-                .contains("@") && binding.editTextEmailActivityLogin.text.toString()
+        if (binding.editTextEmail.text.toString()
+                .isEmpty() && binding.editTextEmail.text.toString()
+                .contains("@") && binding.editTextEmail.text.toString()
                 .contains(".com")
         ) {
             mostrarSnackbarErroEmail()
-        } else if (binding.editTextPasswordActivityLogin.text.toString()
-                .isEmpty() && binding.editTextPasswordActivityLogin.text.toString().length < 8
+        } else if (binding.editTextPassword.text.toString()
+                .isEmpty() && binding.editTextPassword.text.toString().length < 8
         ) {
             mostrarSnackbarErroSenha()
         } else {
@@ -48,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
             binding.root, R.string.informe_e_mail,
             Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
-        findViewById<EditText>(R.id.edit_text_email_activity_login).error =
+        findViewById<EditText>(R.id.edit_text_email).error =
             "Informe um e-mail válido";
     }
 
@@ -57,23 +61,8 @@ class LoginActivity : AppCompatActivity() {
             binding.root, R.string.informe_senha,
             Snackbar.LENGTH_LONG,
         ).setBackgroundTint(ContextCompat.getColor(this, R.color.vermelho)).show()
-        findViewById<EditText>(R.id.edit_text_password_activity_login).error =
+        findViewById<EditText>(R.id.edit_text_password).error =
             "A senha precisa conter no mínimo 8 caracteres";
-    }
-
-    private fun mostrarSnackbarSucesso() {
-        Snackbar.make(
-            binding.root, R.string.usuario_criado, Snackbar.LENGTH_INDEFINITE
-        ).setAction(android.R.string.ok) {
-            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
-            startActivity(intent)
-        }.setActionTextColor(
-            ColorStateList.valueOf(
-                ContextCompat.getColor(
-                    this, R.color.white
-                )
-            )
-        ).setBackgroundTint(ContextCompat.getColor(this, R.color.special_text)).show()
     }
 
     private fun chamarHomeActivity() {
