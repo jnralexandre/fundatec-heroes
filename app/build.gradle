@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'br.org.fundatec.heroes_app'
+    namespace 'br.org.fundatec.heroesapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "br.org.fundatec.heroes_app"
+        applicationId "br.org.fundatec.heroesapp"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -41,4 +44,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'androidx.activity:activity-ktx:1.6.1'
 }

@@ -1,4 +1,4 @@
-package br.org.fundatec.heroes_app
+package br.org.fundatec.heroesapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
