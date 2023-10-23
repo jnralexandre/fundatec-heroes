@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background_profile_activity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <View
+        android:id="@+id/view_home_activity"
+        style="@style/container_components_activity_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></View>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_criar_personagem"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:alpha="0.7"
-        android:text="Bem-vindo à tela HomeActivity"
-        android:textColor="@color/black"
-        android:textSize="50dp" />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/view_home_activity"
+        app:layout_constraintStart_toStartOf="@+id/view_home_activity"
+        app:layout_constraintTop_toTopOf="@+id/view_home_activity">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/text_view_criar_personagem"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/criar_personagem"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:textSize="35sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/im_criar_personagem"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_person"
+        android:backgroundTint="@color/background_button"
+        app:layout_constraintEnd_toEndOf="@+id/til_criar_personagem"
+        app:layout_constraintStart_toStartOf="@+id/til_criar_personagem"
+        app:layout_constraintTop_toBottomOf="@+id/til_criar_personagem"></ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

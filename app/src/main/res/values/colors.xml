@@ -6,9 +6,9 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
     <color name="vermelho">#FF0000</color>
-    <color name="background_card">#fff</color>
+    <color name="background_card">#F5F5F7</color>
     <color name="background_button">#0071e3</color>
     <color name="default_text">#1d1d1f</color>
     <color name="special_text">#06c</color>
