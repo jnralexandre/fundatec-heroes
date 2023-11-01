@@ -8,8 +8,8 @@
     <ImageView
         android:id="@+id/logo_fundatec_profile"
         android:layout_width="300dp"
-        android:layout_marginTop="20dp"
         android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/arnold_schwarzenegger"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,9 +18,9 @@
     <View
         android:id="@+id/view_criar_usuario"
         style="@style/container_components_activity_profile"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="100dp"
         app:layout_constraintTop_toBottomOf="@+id/logo_fundatec_profile"></View>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -29,11 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="25dp"
+        app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
-        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/background_button"
+        app:hintTextColor="@color/background_button"
         app:layout_constraintEnd_toEndOf="@+id/view_criar_usuario"
         app:layout_constraintStart_toStartOf="@+id/view_criar_usuario"
         app:layout_constraintTop_toTopOf="@+id/view_criar_usuario">
@@ -52,12 +54,14 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
-        android:layout_marginTop="5dp"
-        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/background_button"
+        app:hintTextColor="@color/background_button"
         app:layout_constraintEnd_toEndOf="@+id/til_nome_usuario"
         app:layout_constraintStart_toStartOf="@+id/til_nome_usuario"
         app:layout_constraintTop_toBottomOf="@+id/til_nome_usuario">
@@ -82,6 +86,8 @@
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
+        app:boxStrokeColor="@color/background_button"
+        app:hintTextColor="@color/background_button"
         app:layout_constraintEnd_toEndOf="@+id/til_email"
         app:layout_constraintStart_toStartOf="@+id/til_email"
         app:layout_constraintTop_toBottomOf="@+id/til_email"
@@ -107,6 +113,6 @@
         app:layout_constraintBottom_toBottomOf="@id/view_criar_usuario"
         app:layout_constraintEnd_toEndOf="@+id/til_edit_text_password"
         app:layout_constraintStart_toStartOf="@+id/til_edit_text_password"
-        app:layout_constraintTop_toBottomOf="@+id/til_edit_text_password"></Button>
+        app:layout_constraintTop_toBottomOf="@+id/til_edit_text_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

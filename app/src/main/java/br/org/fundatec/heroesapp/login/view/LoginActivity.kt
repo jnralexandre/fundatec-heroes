@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.org.fundatec.heroesapp.R
 import br.org.fundatec.heroesapp.databinding.ActivityLoginBinding
 import br.org.fundatec.heroesapp.home.view.HomeActivity
-import br.org.fundatec.heroesapp.profile.view.ProfileActivity
+import br.org.fundatec.heroesapp.profile.presentation.ProfileActivity
 import br.org.fundatec.heroesapp.showSnackbarMessage
 
 class LoginActivity : AppCompatActivity() {

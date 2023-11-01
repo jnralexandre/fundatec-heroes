@@ -20,7 +20,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="br.org.fundatec.heroesapp.profile.view.ProfileActivity"
+            android:name=".profile.presentation.ProfileActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
