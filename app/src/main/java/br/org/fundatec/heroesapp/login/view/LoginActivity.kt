@@ -2,15 +2,19 @@ package br.org.fundatec.heroesapp.login.view
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.org.fundatec.heroesapp.R
 import br.org.fundatec.heroesapp.databinding.ActivityLoginBinding
 import br.org.fundatec.heroesapp.home.view.HomeActivity
-import br.org.fundatec.heroesapp.profile.presentation.ProfileActivity
+import br.org.fundatec.heroesapp.login.presentation.LoginViewModel
+import br.org.fundatec.heroesapp.login.presentation.model.LoginViewState
+import br.org.fundatec.heroesapp.profile.view.ProfileActivity
 import br.org.fundatec.heroesapp.showSnackbarMessage
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private val viewModel: LoginViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
@@ -19,36 +23,29 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnEntrar.setOnClickListener {
-            validarUsuario()
+            viewModel.validateInputs(
+                email = binding.editTextEmail.text.toString(),
+                password = binding.editTextPassword.text.toString()
+            )
         }
 
         binding.btnNovoPorAqui.setOnClickListener {
             chamarProfileActivity()
         }
+
+        initializeObservers()
     }
 
-    private fun validarUsuario() {
-        if (
-            binding.editTextEmail.text.toString().isEmpty() ||
-            !binding.editTextEmail.text.toString().contains("@") ||
-            !binding.editTextEmail.text.toString().contains(".com")
-        ) {
-            showSnackbarMessage(
-                binding.editTextEmail,
-                R.string.informe_e_mail,
-                R.color.vermelho
-            )
-        } else if (
-            binding.editTextPassword.text.toString().isEmpty() ||
-            binding.editTextPassword.text.toString().length < 8
-        ) {
-            showSnackbarMessage(
-                binding.editTextPassword,
-                R.string.informe_senha,
-                R.color.vermelho
-            )
-        } else {
-            chamarHomeActivity()
+    private fun initializeObservers(){
+        viewModel.state.observe(this) { viewState->
+            when(viewState){
+                LoginViewState.Error -> TODO()
+                LoginViewState.Loading -> TODO()
+                LoginViewState.ShowEmailError -> TODO()
+                LoginViewState.ShowPasswordError -> TODO()
+                LoginViewState.Success -> chamarHomeActivity()
+            }
+
         }
     }
 

@@ -1,4 +1,4 @@
-package br.org.fundatec.heroesapp.profile.presentation
+package br.org.fundatec.heroesapp.profile.view
 
 import android.os.Bundle
 import android.os.Handler

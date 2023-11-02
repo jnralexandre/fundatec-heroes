@@ -20,7 +20,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".profile.presentation.ProfileActivity"
+            android:name=".profile.view.ProfileActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />

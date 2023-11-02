@@ -22,26 +22,10 @@ fun Context.showSnackbarMessage(
     @ColorRes colorBackgroud: Int,
     duration: Int = Snackbar.LENGTH_LONG
 ) {
-    if (snackbarMessage.equals(R.string.informe_nome_de_usuario)) {
-        Snackbar.make(
-            editText,
-            R.string.informe_nome_de_usuario,
-            duration,
-        ).setBackgroundTint(ContextCompat.getColor(this, colorBackgroud)).show()
-        editText.error = getString(snackbarMessage)
-    } else if (snackbarMessage.equals(R.string.informe_e_mail)) {
-        Snackbar.make(
-            editText,
-            R.string.informe_e_mail,
-            duration,
-        ).setBackgroundTint(ContextCompat.getColor(this, colorBackgroud)).show()
-        editText.error = getString(snackbarMessage)
-    } else if (snackbarMessage.equals(R.string.informe_senha)) {
-        Snackbar.make(
-            editText,
-            R.string.informe_senha,
-            duration,
-        ).setBackgroundTint(ContextCompat.getColor(this, colorBackgroud)).show()
-        editText.error = getString(snackbarMessage)
-    }
+    Snackbar.make(
+        editText,
+        snackbarMessage,
+        duration,
+    ).setBackgroundTint(ContextCompat.getColor(this, colorBackgroud)).show()
+    editText.error = getString(snackbarMessage)
 }
