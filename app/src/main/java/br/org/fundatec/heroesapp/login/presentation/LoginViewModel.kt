@@ -3,9 +3,7 @@ package br.org.fundatec.heroesapp.login.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import br.org.fundatec.heroesapp.R
 import br.org.fundatec.heroesapp.login.presentation.model.LoginViewState
-import br.org.fundatec.heroesapp.showSnackbarMessage
 
 class LoginViewModel() : ViewModel() {
 

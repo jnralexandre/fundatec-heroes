@@ -6,11 +6,13 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.org.fundatec.heroesapp.R
 import br.org.fundatec.heroesapp.databinding.ActivityLoginBinding
+import br.org.fundatec.heroesapp.gone
 import br.org.fundatec.heroesapp.home.view.HomeActivity
 import br.org.fundatec.heroesapp.login.presentation.LoginViewModel
 import br.org.fundatec.heroesapp.login.presentation.model.LoginViewState
 import br.org.fundatec.heroesapp.profile.view.ProfileActivity
 import br.org.fundatec.heroesapp.showSnackbarMessage
+import br.org.fundatec.heroesapp.visible
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -39,10 +41,25 @@ class LoginActivity : AppCompatActivity() {
     private fun initializeObservers(){
         viewModel.state.observe(this) { viewState->
             when(viewState){
-                LoginViewState.Error -> TODO()
-                LoginViewState.Loading -> TODO()
-                LoginViewState.ShowEmailError -> TODO()
-                LoginViewState.ShowPasswordError -> TODO()
+                LoginViewState.Loading -> binding.progressBar.visible()
+                LoginViewState.Error ->
+                    binding.progressBar.gone()
+                LoginViewState.ShowEmailError -> {
+                    binding.progressBar.gone()
+                    showSnackbarMessage(
+                        binding.editTextEmail,
+                        R.string.informe_e_mail,
+                        R.color.vermelho
+                    )
+                }
+                LoginViewState.ShowPasswordError -> {
+                    binding.progressBar.gone()
+                    showSnackbarMessage(
+                        binding.editTextPassword,
+                        R.string.informe_senha,
+                        R.color.vermelho
+                    )
+                }
                 LoginViewState.Success -> chamarHomeActivity()
             }
 
@@ -50,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun chamarHomeActivity() {
+        binding.progressBar.gone()
         val intent = Intent(this@LoginActivity, HomeActivity::class.java)
         startActivity(intent)
     }
