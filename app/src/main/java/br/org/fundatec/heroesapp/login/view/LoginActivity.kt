@@ -41,7 +41,8 @@ class LoginActivity : AppCompatActivity() {
     private fun initializeObservers(){
         viewModel.state.observe(this) { viewState->
             when(viewState){
-                LoginViewState.Loading -> binding.progressBar.visible()
+                LoginViewState.Loading ->
+                    binding.progressBar.visible()
                 LoginViewState.Error ->
                     binding.progressBar.gone()
                 LoginViewState.ShowEmailError -> {

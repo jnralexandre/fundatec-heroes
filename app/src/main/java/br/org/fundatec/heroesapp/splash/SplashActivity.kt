@@ -1,4 +1,4 @@
-package br.org.fundatec.heroesapp.splash.view
+package br.org.fundatec.heroesapp.splash
 
 import android.content.Intent
 import android.os.Bundle

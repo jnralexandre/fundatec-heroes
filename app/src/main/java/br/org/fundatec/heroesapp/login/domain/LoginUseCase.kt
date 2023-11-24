@@ -1,11 +1,6 @@
 package br.org.fundatec.heroesapp.login.domain
 
-import android.util.Log
-import br.org.fundatec.heroesapp.login.data.LoginRequest
 import br.org.fundatec.heroesapp.login.data.repository.LoginRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import java.lang.Exception
 
 class LoginUseCase {
     private val repository by lazy {
@@ -23,4 +18,15 @@ class LoginUseCase {
            password = password,
        )
     }
+
+    suspend fun verificarUser(
+        password: String,
+        email: String,
+    ): Boolean {
+        return repository.verificarUser(
+            password = password,
+            email = email
+        )
+    }
+
 }

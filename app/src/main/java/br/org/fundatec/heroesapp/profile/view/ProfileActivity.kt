@@ -1,5 +1,6 @@
 package br.org.fundatec.heroesapp.profile.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.activity.viewModels
@@ -7,9 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import br.org.fundatec.heroesapp.R
 import br.org.fundatec.heroesapp.databinding.ActivityProfileBinding
+import br.org.fundatec.heroesapp.gone
+import br.org.fundatec.heroesapp.login.view.LoginActivity
 import br.org.fundatec.heroesapp.profile.presentation.ProfileViewModel
 import br.org.fundatec.heroesapp.profile.presentation.model.ProfileViewState
 import br.org.fundatec.heroesapp.showSnackbarMessage
+import br.org.fundatec.heroesapp.visible
 import com.google.android.material.snackbar.Snackbar
 
 class ProfileActivity : AppCompatActivity() {
@@ -24,17 +28,27 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.btnCriarUsuario.setOnClickListener {
             viewModel.validateInputs(
+                name = binding.editTextNomeUsuario.text.toString(),
                 email = binding.editTextEmail.text.toString(),
                 password = binding.editTextPassword.text.toString()
             )
         }
+        initializeObservers()
     }
 
     private fun initializeObservers() {
         viewModel.state.observe(this) { viewState ->
             when (viewState) {
-//                ProfileViewState.Loading ->
-//                ProfileViewState.Error ->
+                ProfileViewState.Loading ->
+                    binding.progressBar.visible()
+                ProfileViewState.Error -> {
+                    binding.progressBar.gone()
+                    showSnackbarMessage(
+                        binding.editTextEmail,
+                        R.string.erro_ao_criar_usuario,
+                        R.color.vermelho
+                    )
+                }
                 ProfileViewState.ShowUserError -> {
                     showSnackbarMessage(
                         binding.editTextNomeUsuario,
@@ -59,7 +73,7 @@ class ProfileActivity : AppCompatActivity() {
                     )
                 }
 
-//                ProfileViewState.Success -> chamarHomeActivity()
+                ProfileViewState.Success -> mostrarSnackbarSucesso()
             }
 
         }

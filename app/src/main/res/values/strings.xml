@@ -13,4 +13,6 @@
     <string name="url">URL</string>
     <string name="age">Idade</string>
     <string name="date">Data</string>
+    <string name="erro_ao_criar_usuario">Erro ao criar usuário. Tente novamente mais tarde</string>
+    <string name="adicionar_personagem">Adicionar Personagem</string>
 </resources>

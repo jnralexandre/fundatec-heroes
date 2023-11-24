@@ -3,9 +3,14 @@ package br.org.fundatec.heroesapp.login.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.org.fundatec.heroesapp.login.domain.LoginUseCase
 import br.org.fundatec.heroesapp.login.presentation.model.LoginViewState
 
 class LoginViewModel() : ViewModel() {
+
+    private val useCase by lazy {
+        LoginUseCase()
+    }
 
     private val viewState: MutableLiveData<LoginViewState> = MutableLiveData()
     val state: LiveData<LoginViewState> = viewState
