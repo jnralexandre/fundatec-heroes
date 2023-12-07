@@ -13,13 +13,6 @@ class App : Application() {
 
     init {
         instance = this
-//        startKoin {
-//          androidLogger()
-//          androidContext(instance)
-//            modules (
-//                listOf(loginModule)
-//            )
-//        }
     }
 
 }

@@ -15,6 +15,7 @@ import br.org.fundatec.heroesapp.showSnackbarMessage
 import br.org.fundatec.heroesapp.visible
 
 class LoginActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityLoginBinding
     private val viewModel: LoginViewModel by viewModels()
 
