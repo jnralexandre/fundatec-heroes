@@ -15,4 +15,7 @@ interface UserDao {
 
     @Query("DELETE FROM user_table")
     fun clearCache()
+
+    @Query("SELECT id FROM user_table LIMIT 1")
+    fun pegarId(): Int
 }

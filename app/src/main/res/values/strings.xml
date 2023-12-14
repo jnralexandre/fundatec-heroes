@@ -15,4 +15,28 @@
     <string name="date">Data</string>
     <string name="erro_ao_criar_usuario">Erro ao criar usuário. Tente novamente mais tarde</string>
     <string name="adicionar_personagem">Adicionar Personagem</string>
+
+    <string name="texto_novoUsuario">Novo por aqui?</string>
+
+
+    <string name="mensagem_nome_personagem">Erro, insira um nome válido</string>
+    <string name="mensagem_descricao_personagem">Erro, insira uma descrição</string>
+    <string name="mensagem_url_personagem">Erro, insira uma url válida</string>
+    <string name="tipo_empresa">Erro, selecione um universo válido</string>
+    <string name="tipo_personagem">Erro, selecione um tipo de personagem</string>
+    <string name="idade_personagem">Erro, insira a idade do personagem</string>
+    <string name="data_personagem">Erro, selecione uma data</string>
+    <string name="erroGenerico_personagem">Erro ao criar, tente novamente</string>
+    <string name="sucessoCriar_personagem">Personagem criado com sucesso!</string>
+
+
+    <string-array name="tipo_personagem">
+        <item>Herói</item>
+        <item>Vilão</item>
+    </string-array>
+
+    <string-array name="tipo_empresa">
+        <item>DC</item>
+        <item>Marvel</item>
+    </string-array>
 </resources>

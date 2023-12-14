@@ -29,3 +29,24 @@ fun Context.showSnackbarMessage(
     ).setBackgroundTint(ContextCompat.getColor(this, colorBackgroud)).show()
     editText.error = getString(snackbarMessage)
 }
+
+fun Context.showSnackBar(
+    view: View,
+    @StringRes snackbarMessage: Int,
+    @ColorRes colorBackgroud: Int,
+    duration: Int = Snackbar.LENGTH_SHORT
+) {
+    Snackbar.make(
+        view,
+        snackbarMessage,
+        duration,
+    ).setBackgroundTint(ContextCompat.getColor(this, colorBackgroud)).show()
+}
+
+
+fun EditText.showError(
+    @StringRes snackbarMessage: Int,
+) {
+
+    error = context.getString(snackbarMessage)
+}

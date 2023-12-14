@@ -29,9 +29,6 @@ class SplashActivity : AppCompatActivity() {
             }
         }
 
-        val handle = Handler()
-        handle.postDelayed({ chamarLoginActivity() }, 3000)
-
     }
 
     private fun chamarLoginActivity() {

@@ -19,19 +19,17 @@ class LoginRepository {
     private val database: FHDatabase by lazy {
         FHDatabase.getInstance()
     }
-    
-    suspend fun createUser(
-        name: String,
-        email: String,
-        password: String,
-    ): Boolean {
+
+
+
+    suspend fun createUser(name: String, email: String, password: String): Boolean {
         return withContext(Dispatchers.IO) {
             try {
                 val response = repository.createUser(
                     loginRequest = LoginRequest(
                         name = name,
                         email = email,
-                        password = password,
+                        password = password
                     )
                 )
                 response.isSuccessful
@@ -81,4 +79,11 @@ class LoginRepository {
             database.userDao().clearCache()
         }
     }
+
+    suspend fun pegarId(): Int {
+        return withContext(Dispatchers.IO) {
+            database.userDao().pegarId()
+        }
+    }
+
 }
