@@ -2,15 +2,15 @@ package br.org.fundatec.heroesapp.character.presentation.model
 
 sealed class CharacterViewState {
 
-    object ShowNameError: CharacterViewState()
-    object ShowDescriptionError: CharacterViewState()
-    object ShowImageError: CharacterViewState()
-    object ShowUniverseTypeError: CharacterViewState()
-    object ShowCharacterTypeError: CharacterViewState()
-    object ShowAgeError: CharacterViewState()
-    object ShowBirthdayError: CharacterViewState()
+    object NameError: CharacterViewState()
+    object DescriptionError: CharacterViewState()
+    object ImageError: CharacterViewState()
+    object TipoEmpresaError: CharacterViewState()
+    object TipoPersonagemError: CharacterViewState()
+    object AgeError: CharacterViewState()
+    object DateError: CharacterViewState()
     object ShowHomeScreen: CharacterViewState()
 
-    object ShowGenericError: CharacterViewState()
+    object Error: CharacterViewState()
 
 }

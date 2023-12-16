@@ -53,40 +53,40 @@ class CharacterActivity: AppCompatActivity() {
         characterViewModel.state.observe(this) {
             when(it) {
 
-                CharacterViewState.ShowNameError ->
-                    binding.editTextName.showError(R.string.name)
+                CharacterViewState.NameError ->
+                    binding.editTextName.showError(R.string.insira_um_nome_valido)
 
-                CharacterViewState.ShowDescriptionError ->
-                    binding.editTextDescription.showError(R.string.description)
+                CharacterViewState.DescriptionError ->
+                    binding.editTextDescription.showError(R.string.mensagem_descricao_personagem)
 
-                CharacterViewState.ShowImageError ->
-                    binding.editTextUrl.showError(R.string.url)
+                CharacterViewState.ImageError ->
+                    binding.editTextUrl.showError(R.string.mensagem_url_personagem)
 
-                CharacterViewState.ShowUniverseTypeError -> showSnackBar(
+                CharacterViewState.TipoEmpresaError -> showSnackBar(
                     binding.tipoEmpresa,
                     R.string.tipo_empresa,
-                    R.color.background_button
+                    R.color.vermelho
                 )
 
-                CharacterViewState.ShowCharacterTypeError -> showSnackBar(
+                CharacterViewState.TipoPersonagemError -> showSnackBar(
                     binding.tipoPersonagem,
                     R.string.tipo_personagem,
-                    R.color.background_button
+                    R.color.vermelho
                 )
 
-                CharacterViewState.ShowAgeError ->
-                    binding.editTextAge.showError(R.string.age)
+                CharacterViewState.AgeError ->
+                    binding.editTextAge.showError(R.string.idade_personagem)
 
-                CharacterViewState.ShowBirthdayError -> showSnackBar(
+                CharacterViewState.DateError -> showSnackBar(
                     binding.editTextDate,
-                    R.string.date,
-                    R.color.background_button
+                    R.string.idade_personagem,
+                    R.color.vermelho
                 )
 
-                CharacterViewState.ShowGenericError -> showSnackBar(
+                CharacterViewState.Error -> showSnackBar(
                     binding.root,
-                    R.string.erroGenerico_personagem,
-                    R.color.background_button
+                    R.string.erro_ao_criar_personagem_personagem,
+                    R.color.vermelho
                 )
 
                 CharacterViewState.ShowHomeScreen -> chamarTelaHome()

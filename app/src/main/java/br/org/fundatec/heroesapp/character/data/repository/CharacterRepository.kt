@@ -29,15 +29,15 @@ class CharacterRepository {
         birthday: LocalDateTime?): Boolean {
         return withContext(Dispatchers.IO) {
             try {
-                val response = repository.createCharacter(
+                val response = repository.criarPersonagem(
                     idUser = loginRepository.pegarId(),
                     characterRequest = CharacterRequest(
                         name = name,
                         description = description,
                         age = age,
                         birthday = null,
-                        tipoEmpresa = tipoEmpresa,
-                        tipoPersonagem = tipoPersonagem,
+                        universeType = tipoEmpresa,
+                        characterType = tipoPersonagem,
                         image = image
                     )
                 )
@@ -52,7 +52,7 @@ class CharacterRepository {
     suspend fun listCharacter(): List<CharacterResponse> {
         return withContext(Dispatchers.IO) {
             try {
-                val response = repository.listCharacter(
+                val response = repository.listarPersonagem(
                     idUser = loginRepository.pegarId()
                 )
                 response.body()?: listOf()

@@ -2,12 +2,14 @@ package br.org.fundatec.heroesapp.home.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.org.fundatec.heroesapp.character.view.CharacterActivity
 import br.org.fundatec.heroesapp.databinding.ActivityHomeBinding
 import br.org.fundatec.heroesapp.home.presentation.HomeViewModel
 import br.org.fundatec.heroesapp.home.presentation.model.HomeViewState
+import br.org.fundatec.heroesapp.visible
 
 class HomeActivity : AppCompatActivity() {
 
@@ -15,13 +17,16 @@ class HomeActivity : AppCompatActivity() {
     private val viewModel: HomeViewModel by viewModels()
 
     private val adapter: CharacterListAdapter by lazy {
-        CharacterListAdapter()
+        CharacterListAdapter() {
+            Log.e("Home Activity", it.toString())
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        getSupportActionBar()?.hide()
 
         binding.acRecycleView.adapter = adapter
         viewModel.state.observe(this) {
@@ -32,7 +37,7 @@ class HomeActivity : AppCompatActivity() {
                     )
 
                 HomeViewState.Loading -> {
-
+                    binding.progressBar.visible()
                 }
 
                 is HomeViewState.Error ->

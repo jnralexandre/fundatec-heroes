@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:id="@+id/android_constraint_layout_ac"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_profile_activity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cli_cardview"
-        android:layout_width="168dp"
-        android:layout_height="236dp"
-        android:layout_marginTop="15dp"
-        android:paddingHorizontal="8dp"
-        app:cardCornerRadius="16dp"
+        android:layout_width="150dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,11 +35,11 @@
         android:id="@+id/text_view_nome_heroi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@+id/cli_cardview"
         app:layout_constraintStart_toStartOf="@+id/cli_cardview"
         app:layout_constraintTop_toBottomOf="@+id/cli_cardview"
-        tools:text="Nome Heroi" />
+        tools:text="Nome do Heroi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,23 +30,23 @@ class CharacterViewModel : ViewModel() {
         image: String
     ) {
         if (name.isNullOrBlank()) {
-            viewState.value = CharacterViewState.ShowNameError
+            viewState.value = CharacterViewState.NameError
             return
         } else if (description.isNullOrBlank()) {
-            viewState.value = CharacterViewState.ShowDescriptionError
+            viewState.value = CharacterViewState.DescriptionError
             return
         } else if (age.isNullOrBlank()) {
-            viewState.value = CharacterViewState.ShowAgeError
+            viewState.value = CharacterViewState.AgeError
             return
         } else if (tipoEmpresa == 0) {
-            viewState.value = CharacterViewState.ShowUniverseTypeError
+            viewState.value = CharacterViewState.TipoEmpresaError
             return
 
         } else if (tipoPersonagem == 0) {
-            viewState.value = CharacterViewState.ShowCharacterTypeError
+            viewState.value = CharacterViewState.TipoPersonagemError
             return
         } else if (image.isNullOrBlank()) {
-            viewState.value = CharacterViewState.ShowImageError
+            viewState.value = CharacterViewState.ImageError
             return
         }
 //        else if (birthday.toString().isNullOrBlank()) {
@@ -67,7 +67,7 @@ class CharacterViewModel : ViewModel() {
                 if (isSuccess) {
                     viewState.value = CharacterViewState.ShowHomeScreen
                 } else {
-                    viewState.value = CharacterViewState.ShowGenericError
+                    viewState.value = CharacterViewState.Error
                 }
             }
         }

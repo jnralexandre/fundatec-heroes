@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.fundatec.heroesapp.home.domain.CharacterModel
 import br.org.fundatec.heroesapp.databinding.CharacterListItemBinding
 
-class CharacterListAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
+class CharacterListAdapter(
+    private val click: (CharacterModel) -> Unit
+) : RecyclerView.Adapter<CharacterViewHolder>() {
     private val list: MutableList<CharacterModel> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
@@ -16,7 +18,7 @@ class CharacterListAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
             false
         )
 
-        return CharacterViewHolder(binding)
+        return CharacterViewHolder(binding, click)
     }
 
     override fun getItemCount(): Int {
@@ -30,10 +32,5 @@ class CharacterListAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
     fun addList(items: List<CharacterModel>) {
         list.addAll(items)
         notifyDataSetChanged()
-    }
-
-    fun remove(position: Int) {
-        list.removeAt(position)
-        notifyItemChanged(position)
     }
 }

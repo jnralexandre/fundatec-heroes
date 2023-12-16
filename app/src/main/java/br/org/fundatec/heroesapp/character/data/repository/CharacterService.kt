@@ -12,13 +12,13 @@ import retrofit2.http.Path
 interface CharacterService {
 
     @POST("/api/character/{idUser}")
-    suspend fun createCharacter(
+    suspend fun criarPersonagem(
         @Path("idUser") idUser: Int,
         @Body characterRequest: CharacterRequest
     ): Response<ResponseBody>
 
     @GET("/api/character/{idUser}")
-    suspend fun listCharacter(
+    suspend fun listarPersonagem(
         @Path("idUser") idUser: Int,
     ): Response<List<CharacterResponse>>
 }

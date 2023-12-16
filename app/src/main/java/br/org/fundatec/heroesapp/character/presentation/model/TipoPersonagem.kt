@@ -2,13 +2,13 @@ package br.org.fundatec.heroesapp.character.presentation.model
 
 enum class TipoPersonagem {
 
-    HEROI, VILÃO;
+    HERO, VILLAIN;
 
     companion object {
         fun getValueOf(position: Int): String {
             return when (position) {
-                1 -> HEROI.name
-                2 -> VILÃO.name
+                1 -> HERO.name
+                2 -> VILLAIN.name
                 else -> throw IllegalArgumentException("Posição inválida")
             }
         }

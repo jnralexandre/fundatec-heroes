@@ -18,19 +18,19 @@ class HomeViewModel : ViewModel() {
     private val viewState: MutableLiveData<HomeViewState> = MutableLiveData()
     val state: LiveData<HomeViewState> = viewState
 
-    private fun buscarInformacoes() {
+    private fun buscarNaLista() {
         viewModelScope.launch {
             val listCharacter = useCase.listCharacter()
             if (listCharacter.isNotEmpty()) {
                 viewState.value = HomeViewState.Success(listCharacter.toModel())
             } else {
-                viewState.value = HomeViewState.Error("Lista Vazia")
+                viewState.value = HomeViewState.Error("A lista está vazia")
             }
         }
     }
 
     init {
-        buscarInformacoes()
+        buscarNaLista()
     }
 
 }

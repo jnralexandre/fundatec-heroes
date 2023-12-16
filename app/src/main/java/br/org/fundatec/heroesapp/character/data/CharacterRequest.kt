@@ -9,7 +9,7 @@ data class CharacterRequest (
     val age: Int,
     val birthday: String?,
     val image: String,
-    val tipoEmpresa: String,
-    val tipoPersonagem: String
+    val universeType: String,
+    val characterType: String
 
 )
