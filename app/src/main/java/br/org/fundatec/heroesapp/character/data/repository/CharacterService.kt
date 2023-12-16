@@ -5,6 +5,7 @@ import br.org.fundatec.heroesapp.character.data.remote.CharacterResponse
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
@@ -22,8 +23,8 @@ interface CharacterService {
         @Path("idUser") idUser: Int,
     ): Response<List<CharacterResponse>>
 
-    @GET("/api/character/{idUser}")
+    @DELETE("/api/character/{idCharacter}")
     suspend fun deletarPersonagem(
-        @Path("idUser") idUser: Int,
+        @Path("idUser") idCharacter: Int,
     ): Response<ResponseBody>
 }
