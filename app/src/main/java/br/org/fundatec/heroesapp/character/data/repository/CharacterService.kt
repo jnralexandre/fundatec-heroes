@@ -21,4 +21,9 @@ interface CharacterService {
     suspend fun listarPersonagem(
         @Path("idUser") idUser: Int,
     ): Response<List<CharacterResponse>>
+
+    @GET("/api/character/{idUser}")
+    suspend fun deletarPersonagem(
+        @Path("idUser") idUser: Int,
+    ): Response<ResponseBody>
 }

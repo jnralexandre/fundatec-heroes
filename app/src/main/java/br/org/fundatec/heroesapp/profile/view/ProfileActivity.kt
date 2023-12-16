@@ -45,7 +45,7 @@ class ProfileActivity : AppCompatActivity() {
                     binding.progressBar.gone()
                     showSnackbarMessage(
                         binding.editTextEmail,
-                        R.string.erro_ao_criar_usuario,
+                        R.string.erro_ao_criar_personagem,
                         R.color.vermelho
                     )
                 }

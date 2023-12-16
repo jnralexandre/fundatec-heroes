@@ -7,7 +7,6 @@
     <string name="e_mail">E-mail</string>
     <string name="password">Senha</string>
     <string name="user">Nome de Usuário</string>
-    <string name="criar_personagem">Clique na imagem abaixo.</string>
     <string name="insira_um_nome_valido">Informe um nome válido.</string>
     <string name="mensagem_descricao_personagem">Informe uma descrição</string>
     <string name="mensagem_url_personagem">Informe uma URL válida</string>
@@ -15,9 +14,8 @@
     <string name="tipo_personagem">Selecione um tipo de personagem válido.</string>
     <string name="idade_personagem">Informe a idade do personagem.</string>
     <string name="data_personagem">Informe uma data.</string>
-    <string name="erro_ao_criar_personagem_personagem">Erro ao criar personagem.</string>
-    <string name="sucessoCriar_personagem">Sucesso ao criar personagem.</string>
-    <string name="erro_ao_criar_usuario">Erro ao criar usuário. Tente novamente mais tarde</string>
+    <string name="erro_ao_criar_personagem">Erro ao criar personagem.</string>
+    <string name="sucesso_ao_criar_personagem">Sucesso ao criar personagem.</string>
     <string name="adicionar_personagem">Adicionar Personagem</string>
     <string name="name">Nome</string>
     <string name="description">Descrição</string>

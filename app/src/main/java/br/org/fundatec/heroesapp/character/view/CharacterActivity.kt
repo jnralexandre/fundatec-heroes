@@ -85,7 +85,7 @@ class CharacterActivity: AppCompatActivity() {
 
                 CharacterViewState.Error -> showSnackBar(
                     binding.root,
-                    R.string.erro_ao_criar_personagem_personagem,
+                    R.string.erro_ao_criar_personagem,
                     R.color.vermelho
                 )
 
@@ -98,7 +98,7 @@ class CharacterActivity: AppCompatActivity() {
     private fun chamarTelaHome() {
         showSnackBar(
             binding.root,
-            R.string.sucessoCriar_personagem,
+            R.string.sucesso_ao_criar_personagem,
             R.color.background_button
         )
         val handle = Handler()
