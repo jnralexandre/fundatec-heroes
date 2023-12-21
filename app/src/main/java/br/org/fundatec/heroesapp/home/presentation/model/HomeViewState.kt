@@ -6,4 +6,5 @@ sealed class HomeViewState {
     data class Success(val list: List<CharacterModel>) : HomeViewState()
     object Loading : HomeViewState()
     data class Error(val errorMessage: String) : HomeViewState()
+    object DeletarPersonagem : HomeViewState()
 }

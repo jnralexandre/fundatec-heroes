@@ -30,8 +30,12 @@ class CharacterUseCase {
         )
     }
 
-    suspend fun listCharacter(): List<CharacterResponse> {
+    suspend fun listarPersonagem(): List<CharacterResponse> {
         return repository.listCharacter();
+    }
+
+    suspend fun deletarPersonagem(characterId: Int):Boolean {
+        return repository.deletarPersonagem(characterId);
     }
 
 }

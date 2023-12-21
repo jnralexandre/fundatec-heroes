@@ -20,8 +20,9 @@
     <string name="name">Nome</string>
     <string name="description">Descrição</string>
     <string name="age">Idade</string>
-    <string name="date">Data</string>
+    <string name="birthday">Data de Nascimento</string>
     <string name="url">URL</string>
+    <string name="remover_personagem">Personagem removido.</string>
 
     <string-array name="tipo_personagem">
         <item>Herói</item>

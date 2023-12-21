@@ -20,11 +20,22 @@ class HomeViewModel : ViewModel() {
 
     private fun buscarNaLista() {
         viewModelScope.launch {
-            val listCharacter = useCase.listCharacter()
+            val listCharacter = useCase.listarPersonagem()
             if (listCharacter.isNotEmpty()) {
                 viewState.value = HomeViewState.Success(listCharacter.toModel())
             } else {
                 viewState.value = HomeViewState.Error("A lista está vazia")
+            }
+        }
+    }
+
+    fun removerPersonagem(characterId: Int) {
+        viewModelScope.launch {
+            val characterDelete = useCase.deletarPersonagem(characterId)
+            if(characterDelete) {
+                viewState.value = HomeViewState.DeletarPersonagem;
+            } else {
+                viewState.value = HomeViewState.Error("Não existem personagens com o id informado.")
             }
         }
     }

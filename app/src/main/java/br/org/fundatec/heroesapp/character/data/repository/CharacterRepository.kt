@@ -26,7 +26,8 @@ class CharacterRepository {
         tipoEmpresa: String,
         tipoPersonagem: String,
         image: String,
-        birthday: LocalDateTime?): Boolean {
+        birthday: LocalDateTime?
+    ): Boolean {
         return withContext(Dispatchers.IO) {
             try {
                 val response = repository.criarPersonagem(
@@ -55,10 +56,24 @@ class CharacterRepository {
                 val response = repository.listarPersonagem(
                     idUser = loginRepository.pegarId()
                 )
-                response.body()?: listOf()
+                response.body() ?: listOf()
             } catch (ex: Exception) {
                 Log.e("listCharacter", ex.message.toString())
                 listOf();
+            }
+        }
+    }
+
+    suspend fun deletarPersonagem(characterId: Int): Boolean {
+        return withContext(Dispatchers.IO) {
+            try {
+                val response = repository.deletarPersonagem(
+                    characterId
+                )
+                response.code() == 204
+            } catch (ex: Exception) {
+                Log.e("deletarPersonagem", ex.message.toString())
+                false
             }
         }
     }

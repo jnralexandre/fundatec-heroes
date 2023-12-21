@@ -25,6 +25,6 @@ interface CharacterService {
 
     @DELETE("/api/character/{idCharacter}")
     suspend fun deletarPersonagem(
-        @Path("idUser") idCharacter: Int,
+        @Path("idCharacter") idCharacter: Int,
     ): Response<ResponseBody>
 }

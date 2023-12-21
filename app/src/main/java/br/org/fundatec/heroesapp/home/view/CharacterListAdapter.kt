@@ -33,4 +33,13 @@ class CharacterListAdapter(
         list.addAll(items)
         notifyDataSetChanged()
     }
+
+    fun retrieveCharacter(position: Int): CharacterModel {
+        return list[position]
+    }
+
+    fun removeAt(adapterPosition: Int) {
+
+    }
+
 }
